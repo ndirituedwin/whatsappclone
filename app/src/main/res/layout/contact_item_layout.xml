@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imageUrl="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#EFE7EA"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtContactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:hint="Contact name"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp" />
+
+            <TextView
+                android:id="@+id/txtContactStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtContactName"
+                android:layout_alignStart="@+id/txtContactName"
+                android:layout_marginTop="8dp"
+                android:textColor="#4CAF50"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:hint="profile status"
+                android:textStyle="bold"
+                android:layout_alignLeft="@+id/txtContactName" />
+
+
+            <TextView
+                android:id="@+id/txtContactphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtContactStatus"
+                android:layout_alignStart="@+id/txtContactStatus"
+                android:layout_marginTop="8dp"
+                android:textColor="#4CAF50"
+                android:textSize="13dp"
+                android:hint="0799149758"
+                android:textStyle="bold"
+                android:layout_alignLeft="@+id/txtContactStatus" />
+
+
+            <ImageView
+                android:id="@+id/imgContact"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_info_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgContactUserInfo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@id/container"
+        android:layout_alignParentStart="true"
+        android:background="@color/ic_launcher_background"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:elevation="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KampusKonekt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_chats_fragment">Chats</string>
+    <string name="hello_contacts_fragment">Contacts</string>
+    <string name="hello_Groups_fragment">Groups</string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication.SettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorAccent"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userprofileImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="2dp"
+                    android:layout_gravity="center"
+                    android:src="@color/ic_launcher_background"
+                    />
+                <ImageView
+                    android:id="@+id/pickimage"
+                    android:layout_width="30dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_baseline_photo_camera_24"
+                    app:layout_anchor="@id/userprofileImage"
+                    app:layout_anchorGravity="end|center"
+
+                    />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:outlineAmbientShadowColor="@color/colorPrimary"
+                android:outlineSpotShadowColor="@color/primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp"
+                android:layout_marginTop="280dp"
+                android:layout_marginHorizontal="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/enterusername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="username" />
+
+                    <EditText
+                        android:id="@+id/enterprofilestatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Hey there i\'m using campus Konekt " />
+
+                    <EditText
+                        android:id="@+id/entermobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="+25791454121" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/updateuserprofilebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@+id/cardview"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttons"
+                android:text="Update Profile"
+                android:textColor="@color/white"
+                android:shadowColor="@color/black"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

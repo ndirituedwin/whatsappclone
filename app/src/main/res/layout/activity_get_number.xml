@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/getnumberscreen"
+    tools:context=".Authentication.GetNumber">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgnumber"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/pnoneverify"
+                android:layout_centerHorizontal="true"
+
+                />
+            <TextView
+                android:id="@+id/verifyphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verify phone number"
+                android:textStyle="italic"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/progressbarlayout"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:id="@+id/enterphonenumbertoverifytextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter your phone number to verify"
+                android:textStyle="italic"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/verifyphone"
+                android:layout_centerInParent="true"
+                />
+            <LinearLayout
+                android:id="@+id/phonelinearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/enterphonenumbertoverifytextview">
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countrycodepicker"
+                    android:layout_width="wrap_content"
+                    app:ccp_showFlag="false"
+                    app:ccpDialog_showFlag="false"
+                    app:ccp_autoFormatNumber="true"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    />
+                <EditText
+                    android:id="@+id/txtenterphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:hint="799145852"
+                    android:textStyle="normal"
+                    android:textColor="@color/whitee"
+                    android:backgroundTint="@color/whitee"
+                    android:textColorHint="@color/whitee"
+                    />
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/generateotpbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="Generate OTP"
+                android:background="@drawable/buttons"
+                android:layout_marginHorizontal="40dp"
+                android:layout_below="@+id/phonelinearlayout"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <!--    <Button-->
+            <!--        android:id="@+id/generateotpbtn"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:textAllCaps="false"-->
+            <!--        android:text="Generate OTP"-->
+            <!--        android:background="@drawable/button_background"-->
+            <!--        android:layout_marginHorizontal="40dp"-->
+            <!--        android:layout_below="@+id/phonelinearlayout"-->
+            <!--        android:layout_marginTop="20dp"-->
+
+            <!--        />-->
+            <RelativeLayout
+                android:id="@+id/progressbarlayout"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/imgnumber"
+                android:layout_height="wrap_content">
+                <com.gmail.samehadar.iosdialog.CamomileSpinner
+                    android:id="@+id/progressbar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:spinnerColor="#9C27B0"
+
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
